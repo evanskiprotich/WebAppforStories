@@ -68,8 +68,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({
-      mongoUrl:
-        "mongodb+srv://Evans123:Evans123@cluster0.rsisb.mongodb.net/storybooksDB?retryWrites=true&w=majority",
+      mongoUrl: process.env.MONGO_URI,
     }),
   })
 );
